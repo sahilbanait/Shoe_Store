@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.shoestore.Login"
+        android:label="login"
+        tools:layout="@layout/login" />
+    <fragment
+        android:id="@+id/welcome"
+        android:name="com.example.shoestore.Welcome"
+        android:label="welcome"
+        tools:layout="@layout/welcome" />
+    <fragment
+        android:id="@+id/instruction"
+        android:name="com.example.shoestore.Instruction"
+        android:label="instruction"
+        tools:layout="@layout/instruction" />
+</navigation>

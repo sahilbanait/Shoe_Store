@@ -9,4 +9,12 @@
     <string name="label_welcome">Welcome to Shoe Store</string>
     <string name="get_started">Get Started</string>
     <string name="label_two_welcome_screeen">Explore the best shoes around the world</string>
+    <string name="instruction_text">
+        1. Bring your own Shoes into the market
+        \n\n
+        2. Fast Delivery
+        \n\n
+        3. Best Quality Shoes in the market </string>
+    <string name="text_instruction">Shoe Store</string>
+    <string name="image_instruction_screen">image_instruction_screen</string>
 </resources>

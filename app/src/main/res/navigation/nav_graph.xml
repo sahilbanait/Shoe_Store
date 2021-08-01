@@ -9,12 +9,20 @@
         android:id="@+id/login"
         android:name="com.example.shoestore.Login"
         android:label="login"
-        tools:layout="@layout/login" />
+        tools:layout="@layout/login" >
+        <action
+            android:id="@+id/action_login_to_welcome"
+            app:destination="@id/welcome" />
+    </fragment>
     <fragment
         android:id="@+id/welcome"
         android:name="com.example.shoestore.Welcome"
         android:label="welcome"
-        tools:layout="@layout/welcome" />
+        tools:layout="@layout/welcome" >
+        <action
+            android:id="@+id/action_welcome_to_instruction"
+            app:destination="@id/instruction" />
+    </fragment>
     <fragment
         android:id="@+id/instruction"
         android:name="com.example.shoestore.Instruction"

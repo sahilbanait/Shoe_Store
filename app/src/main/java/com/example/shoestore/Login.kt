@@ -5,16 +5,23 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
+import com.example.shoestore.databinding.LoginBinding
+
 
 class Login : Fragment() {
-
-
+    private lateinit var viewModel: LoginViewModel
+    private lateinit var loginBinding: LoginBinding
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.login, container, false)
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+      loginBinding= DataBindingUtil.inflate( inflater, R.layout.login, container, false)
+
+        return loginBinding.root
     }
 
 }

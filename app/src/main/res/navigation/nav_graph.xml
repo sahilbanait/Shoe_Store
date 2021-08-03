@@ -27,5 +27,14 @@
         android:id="@+id/instruction"
         android:name="com.example.shoestore.Instruction"
         android:label="instruction"
-        tools:layout="@layout/instruction" />
+        tools:layout="@layout/instruction" >
+        <action
+            android:id="@+id/action_instruction_to_shoe_List"
+            app:destination="@id/shoe_List" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoe_List"
+        android:name="com.example.shoestore.Shoe_List"
+        android:label="shoe_list"
+        tools:layout="@layout/shoe_list" />
 </navigation>

@@ -2,6 +2,7 @@ package com.example.shoestore
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.widget.Toolbar
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
@@ -33,7 +34,6 @@ private lateinit var appBarConfiguration: AppBarConfiguration
         val appBarConfiguration = AppBarConfiguration(navController.graph)
         NavigationUI.setupWithNavController(mainBinding.toolbar, navController, appBarConfiguration)
     }
-
 
 
 }

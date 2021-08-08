@@ -18,11 +18,14 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.shoestore.ViewModel.Shoe_Details_ViewModel
+import com.example.shoestore.ViewModel.Shoe_List_ViewModel
 import com.example.shoestore.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-private lateinit var viewModel: LoginViewModel
+private lateinit var shoeDetailsViewmodel: Shoe_Details_ViewModel
+private lateinit var shoeListViewmodel: Shoe_List_ViewModel
 private lateinit var mainBinding: ActivityMainBinding
 private lateinit var appBarConfiguration: AppBarConfiguration
 

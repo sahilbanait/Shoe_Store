@@ -8,11 +8,13 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import com.example.shoestore.R
+import com.example.shoestore.ViewModel.Shoe_List_ViewModel
 import com.example.shoestore.databinding.ShoeListBinding
 
 
 class Shoe_List : Fragment() {
   private lateinit var shoeListBinding: ShoeListBinding
+  private lateinit var shoeListViewmodel: Shoe_List_ViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
     {

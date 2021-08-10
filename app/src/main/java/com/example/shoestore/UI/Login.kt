@@ -5,13 +5,12 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
-import com.example.shoestore.LoginViewModel
+
 import com.example.shoestore.R
 import com.example.shoestore.databinding.LoginBinding
 
 
 class Login : Fragment() {
-    private lateinit var viewModel: LoginViewModel
     private lateinit var loginBinding: LoginBinding
 
     override fun onCreateView(

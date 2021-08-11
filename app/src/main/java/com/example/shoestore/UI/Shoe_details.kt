@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -18,26 +19,35 @@ import com.example.shoestore.databinding.ShoeDetailsBinding
 
 class Shoe_details : Fragment() {
     private lateinit var shoeDetailsBinding: ShoeDetailsBinding
-    private lateinit var viewModel: Shoe_List_ViewModel
+    private val shoeListViewmodel: Shoe_List_ViewModel by activityViewModels()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
 
     {
 
       shoeDetailsBinding= DataBindingUtil.inflate(inflater, R.layout.shoe_details, container, false)
+        shoeListViewmodel.brandName.observe(viewLifecycleOwner,{brandName ->
+            shoeDetailsBinding.edBrandName.text
+        })
+        shoeListViewmodel.shoeColor.observe(viewLifecycleOwner,{shoeColor ->
+            shoeDetailsBinding.edShoeColor.text
+        })
+        shoeListViewmodel.shoeSize.observe(viewLifecycleOwner,{shoeSize ->
+            shoeDetailsBinding.edShoeSize.text.toString()
+        })
+
+
 
         shoeDetailsBinding.buttonCancel.setOnClickListener { view:View ->
             Navigation.findNavController(view).navigate(R.id.shoe_List)
-            viewModel = ViewModelProvider(this).get(Shoe_List_ViewModel::class.java)
+        }
+        shoeDetailsBinding.buttonSave.setOnClickListener { view: View ->
 
+            Navigation.findNavController(view).navigate(R.id.shoe_List)
         }
         return shoeDetailsBinding.root
     }
-    private fun onSave(){
 
-        val shoeSize = shoeDetailsBinding.edShoeSize.text.toString()
-
-    }
 
 
 }

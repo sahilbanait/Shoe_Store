@@ -26,23 +26,13 @@ class Shoe_details : Fragment() {
     {
 
       shoeDetailsBinding= DataBindingUtil.inflate(inflater, R.layout.shoe_details, container, false)
-        shoeListViewmodel.brandName.observe(viewLifecycleOwner,{brandName ->
-            shoeDetailsBinding.edBrandName.text
-        })
-        shoeListViewmodel.shoeColor.observe(viewLifecycleOwner,{shoeColor ->
-            shoeDetailsBinding.edShoeColor.text
-        })
-        shoeListViewmodel.shoeSize.observe(viewLifecycleOwner,{shoeSize ->
-            shoeDetailsBinding.edShoeSize.text.toString()
-        })
-
 
 
         shoeDetailsBinding.buttonCancel.setOnClickListener { view:View ->
             Navigation.findNavController(view).navigate(R.id.shoe_List)
         }
         shoeDetailsBinding.buttonSave.setOnClickListener { view: View ->
-
+            shoeListViewmodel.onSave()
             Navigation.findNavController(view).navigate(R.id.shoe_List)
         }
         return shoeDetailsBinding.root

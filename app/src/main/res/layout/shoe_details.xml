@@ -5,7 +5,7 @@
 <data>
     <variable
         name="viewmodel"
-        type="com.example.shoestore.data.Shoe_List" />
+        type="com.example.shoestore.data.Shoe_List_Data" />
 </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -13,7 +13,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textview_shoeDetails"
+            android:id="@+id/label_newshoeDetails"
             style="@style/text_label_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
             app:layout_constraintBottom_toTopOf="@+id/ed_brandName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textview_shoeDetails"
+            app:layout_constraintTop_toBottomOf="@+id/label_newshoeDetails"
             app:layout_constraintVertical_bias="0.913" />
 
         <EditText
@@ -67,7 +67,7 @@
             app:layout_constraintTop_toBottomOf="@+id/ed_brandName" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/label_shoeSize"
             style="@style/text_label_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:ems="10"
-            android:text="@={viewmodel.shoe_color}"
+            android:text="@={viewmodel.shoe_company}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
@@ -118,7 +118,7 @@
             app:layout_constraintVertical_bias="0.976" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/label_company"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -133,28 +133,28 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/label_description"
             style="@style/text_label_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="18dp"
             android:text="Description"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/ed_description"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ed_shoeColor" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/ed_description"
             style="@style/text_label_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text=""
+            android:text="@={viewmodel.shoe_description}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"

@@ -27,6 +27,7 @@ class Shoe_List : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_shoe_List_to_shoe_details)
         }
 
+
         return shoeListBinding.root
     }
 

@@ -23,5 +23,8 @@ class Shoe_List_ViewModel: ViewModel(){
         _shoeSize.value= newShoeList
     }
 
+    fun onSave(){
+
+    }
 
 }

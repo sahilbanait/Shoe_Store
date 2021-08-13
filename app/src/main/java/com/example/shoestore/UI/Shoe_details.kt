@@ -36,13 +36,11 @@ class Shoe_details : Fragment() {
             shoeDetailsBinding.edShoeSize.text.toString()
         })
 
-
-
         shoeDetailsBinding.buttonCancel.setOnClickListener { view:View ->
             Navigation.findNavController(view).navigate(R.id.shoe_List)
         }
         shoeDetailsBinding.buttonSave.setOnClickListener { view: View ->
-
+            shoeListViewmodel.onSave()
             Navigation.findNavController(view).navigate(R.id.shoe_List)
         }
         return shoeDetailsBinding.root

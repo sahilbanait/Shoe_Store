@@ -6,38 +6,42 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 
 import com.example.shoestore.R
-import com.example.shoestore.ViewModel.Shoe_List_ViewModel
+import com.example.shoestore.ViewModel.SharedViewModel
+import com.example.shoestore.data.Shoe_List_Data
 import com.example.shoestore.databinding.ShoeDetailsBinding
 
 
 class Shoe_details : Fragment() {
     private lateinit var shoeDetailsBinding: ShoeDetailsBinding
-    private val shoeListViewmodel: Shoe_List_ViewModel by activityViewModels()
+  lateinit var sharedViewmodel: SharedViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
 
     {
 
       shoeDetailsBinding= DataBindingUtil.inflate(inflater, R.layout.shoe_details, container, false)
-
+        sharedViewmodel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
 
         shoeDetailsBinding.buttonCancel.setOnClickListener { view:View ->
             Navigation.findNavController(view).navigate(R.id.shoe_List)
         }
+
         shoeDetailsBinding.buttonSave.setOnClickListener { view: View ->
-            shoeListViewmodel.onSave()
+            onSave()
             Navigation.findNavController(view).navigate(R.id.shoe_List)
+
+
         }
         return shoeDetailsBinding.root
     }
 
+    private fun onSave() {
+        sharedViewmodel.loadList(Shoe_List_Data()).toString()
 
+    }
 
 }

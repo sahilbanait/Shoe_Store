@@ -9,12 +9,12 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
-import com.example.shoestore.ViewModel.Shoe_List_ViewModel
+import com.example.shoestore.ViewModel.SharedViewModel
 import com.example.shoestore.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-private lateinit var shoeListViewmodel: Shoe_List_ViewModel
+private lateinit var sharedViewmodel: SharedViewModel
 private lateinit var mainBinding: ActivityMainBinding
 private lateinit var appBarConfiguration: AppBarConfiguration
 

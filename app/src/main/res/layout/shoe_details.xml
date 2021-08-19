@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 <data>
     <variable
-        name="viewmodel"
+        name="Shoe_List_Data"
         type="com.example.shoestore.data.Shoe_List_Data" />
 </data>
 
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="184dp"
             android:ems="10"
-            android:text="@={viewmodel.shoe_brand}"
+            android:text="@={Shoe_List_Data.shoe_name}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:ems="10"
-            android:text="@={viewmodel.shoe_size}"
+            android:text="@={Shoe_List_Data.shoe_size}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:ems="10"
-            android:text="@={viewmodel.shoe_company}"
+            android:text="@={Shoe_List_Data.shoe_company}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
@@ -125,6 +125,7 @@
             android:layout_marginBottom="25dp"
             style="@style/text_label_style"
             android:text="Company"
+
             app:layout_constraintBottom_toTopOf="@+id/ed_shoeColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -154,7 +155,7 @@
             android:layout_marginTop="60dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@={viewmodel.shoe_description}"
+            android:text="@={Shoe_List_Data.shoe_description}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"

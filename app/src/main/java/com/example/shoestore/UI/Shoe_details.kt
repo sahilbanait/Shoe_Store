@@ -40,7 +40,7 @@ class Shoe_details : Fragment() {
     }
 
     private fun onSave() {
-        sharedViewmodel.loadList(Shoe_List_Data()).toString()
+        sharedViewmodel.addShoe(Shoe_List_Data()).toString()
 
     }
 

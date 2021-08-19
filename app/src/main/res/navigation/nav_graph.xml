@@ -40,6 +40,10 @@
         <action
             android:id="@+id/action_shoe_List_to_shoe_details"
             app:destination="@id/shoe_details" />
+        <action
+            android:id="@+id/action_shoe_List_pop_including_instruction"
+            app:popUpTo="@id/instruction"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/shoe_details"

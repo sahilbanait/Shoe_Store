@@ -40,8 +40,12 @@ class Shoe_details : Fragment() {
     }
 
     private fun onSave() {
-
-
+        val binder = shoeDetailsBinding.shoeListData
+        val name = binder?.shoe_name.toString()
+        val company = binder?.shoe_company.toString()
+        val description = binder?.shoe_description.toString()
+        val size = binder?.shoe_size.toString()
+        sharedViewmodel.onSave(size,name,company,description)
     }
 
 }

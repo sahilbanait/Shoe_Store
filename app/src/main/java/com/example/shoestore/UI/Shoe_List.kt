@@ -16,6 +16,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.shoestore.R.id.*
 import com.example.shoestore.data.Shoe_List_Data
+import com.example.shoestore.databinding.ListViewBinding
 
 
 class Shoe_List : Fragment() {
@@ -34,10 +35,12 @@ class Shoe_List : Fragment() {
         })
 
 
+        shoeListBinding?.lifecycleOwner = viewLifecycleOwner
         shoeListBinding.floatingActionButton.setOnClickListener { view: View ->
             Navigation.findNavController(view).navigate(R.id.action_shoe_List_to_shoe_details)
 
         }
+
 
         return shoeListBinding.root
     }
@@ -46,11 +49,14 @@ class Shoe_List : Fragment() {
 
 
             shoe.forEach{
-
-                shoeListBinding.textViewCompany.text =it.shoe_company
-                shoeListBinding.textViewDescription.text= it.shoe_description
-                shoeListBinding.textViewName.text= it.shoe_name
-                shoeListBinding.textViewSize.text= it.shoe_size.toString()
+                val Binding = ListViewBinding.inflate(LayoutInflater.from(requireContext()), shoeListBinding.shoeListLinearLayout, false)
+                with(Binding) {
+                   shoeCompany.text = it.shoe_company
+                    shoeDescription.text=it.shoe_description
+                    shoeName.text = it.shoe_name
+                    shoeSize.text = it.shoe_size.toString()
+                }
+                shoeListBinding!!.shoeListLinearLayout.addView(Binding.root)
 
             }
     }
@@ -60,6 +66,7 @@ class Shoe_List : Fragment() {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.overflow_menu, menu)
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController()) ||
                 super.onOptionsItemSelected(item)

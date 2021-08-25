@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="52dp"
             android:text="New Shoes Details"
-            android:textSize="50sp"
+            android:textSize="40sp"
             android:textColor="#689F38"
             app:layout_constraintBottom_toTopOf="@+id/ed_brandName"
             app:layout_constraintEnd_toEndOf="parent"

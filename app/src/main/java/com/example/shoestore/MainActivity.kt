@@ -32,16 +32,13 @@ private lateinit var appBarConfiguration: AppBarConfiguration
         val appBarConfiguration = AppBarConfiguration(navController.graph)
         setSupportActionBar(mainBinding.toolbar)
         NavigationUI.setupWithNavController(mainBinding.toolbar, navController, appBarConfiguration)
-        Log.i("GameFragment", "Called ViewModelProvider.get")
-
-
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.overflow_menu,menu)
-        return true
-    }
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        val inflater: MenuInflater = menuInflater
+//        inflater.inflate(R.menu.overflow_menu,menu)
+//        return true
+//    }
 
 
 }

@@ -13,6 +13,10 @@
         <action
             android:id="@+id/action_login_to_welcome"
             app:destination="@id/welcome" />
+        <action
+            android:id="@+id/action_login_to_instruction"
+            app:destination="@id/instruction"
+            app:launchSingleTop="true" />
     </fragment>
     <fragment
         android:id="@+id/welcome"

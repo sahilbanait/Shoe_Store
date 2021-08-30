@@ -34,11 +34,6 @@ private lateinit var appBarConfiguration: AppBarConfiguration
         NavigationUI.setupWithNavController(mainBinding.toolbar, navController, appBarConfiguration)
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        val inflater: MenuInflater = menuInflater
-//        inflater.inflate(R.menu.overflow_menu,menu)
-//        return true
-//    }
 
 
 }

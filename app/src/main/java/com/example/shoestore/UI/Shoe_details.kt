@@ -24,7 +24,9 @@ class Shoe_details : Fragment() {
     {
 
       shoeDetailsBinding= DataBindingUtil.inflate(inflater, R.layout.shoe_details, container, false)
+        shoeDetailsBinding.shoeListData = Shoe_List_Data()
         sharedViewmodel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
+        shoeDetailsBinding.shoeListData = Shoe_List_Data()
 
         shoeDetailsBinding.buttonCancel.setOnClickListener { view:View ->
             Navigation.findNavController(view).navigate(R.id.shoe_List)

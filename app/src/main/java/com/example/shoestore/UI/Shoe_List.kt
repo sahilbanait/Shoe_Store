@@ -29,7 +29,7 @@ class Shoe_List : Fragment() {
 
         val viewModel =ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
         setHasOptionsMenu(true)
-
+// Setting up the observer
         viewModel.dataList.observe(viewLifecycleOwner, Observer {shoe ->
                         listView(shoe)
         })
@@ -44,7 +44,7 @@ class Shoe_List : Fragment() {
 
         return shoeListBinding.root
     }
-
+// setting  up the list view
     private fun listView(shoe: List<Shoe_List_Data>) {
 
 

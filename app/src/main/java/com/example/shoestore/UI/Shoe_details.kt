@@ -23,11 +23,15 @@ class Shoe_details : Fragment() {
 
     {
 
+// Inflating the view using data binding
       shoeDetailsBinding= DataBindingUtil.inflate(inflater, R.layout.shoe_details, container, false)
+
         shoeDetailsBinding.shoeListData = Shoe_List_Data()
+
         sharedViewmodel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
         shoeDetailsBinding.shoeListData = Shoe_List_Data()
 
+// Setting clickListener to navigate back to Shoe_List
         shoeDetailsBinding.buttonCancel.setOnClickListener { view:View ->
             Navigation.findNavController(view).navigate(R.id.shoe_List)
         }
@@ -40,7 +44,7 @@ class Shoe_details : Fragment() {
         }
         return shoeDetailsBinding.root
     }
-
+// Saving the shoes details
     private fun onSave() {
         val binder = shoeDetailsBinding.shoeListData
         val name = binder?.shoe_name.toString()

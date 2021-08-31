@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
 <!-- Linear Layout is used because it is easier to align all the children in single direction
    For Example- In this layout its aligning vertically -->
 <!--Using Linear Layout here as it is -->
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -50,25 +50,23 @@
             android:ems="10"
             android:hint="@string/password_hint"
             android:inputType="textPassword"
-            android:paddingTop="16dp" />
+            android:paddingTop="16dp"
+            tools:ignore="TextContrastCheck" />
 
         <Button
             android:id="@+id/button_signIn"
             style="@style/button_style"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
-
-
             android:text="@string/sign_in" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textViewOR"
             style="@style/text_label_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center"
             android:paddingTop="10dp"
-
             android:text="@string/or" />
 
         <Button

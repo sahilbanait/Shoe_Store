@@ -50,6 +50,10 @@
         <action
             android:id="@+id/action_shoe_List_to_instruction"
             app:destination="@id/instruction" />
+        <action
+            android:id="@+id/action_shoe_List_to_instruction2"
+            app:destination="@id/instruction"
+            app:popUpTo="@id/instruction" />
     </fragment>
     <fragment
         android:id="@+id/shoe_details"
@@ -57,7 +61,7 @@
         android:label="shoe_details"
         tools:layout="@layout/shoe_details" >
         <action
-            android:id="@+id/action_shoe_details_to_instruction"
-            app:destination="@id/instruction" />
+            android:id="@+id/action_shoe_details_to_shoe_List"
+            app:destination="@id/shoe_List" />
     </fragment>
 </navigation>

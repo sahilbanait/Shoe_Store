@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.example.shoestore.R
 import com.example.shoestore.databinding.InstructionBinding
 
@@ -21,6 +23,9 @@ private lateinit var instructionBinding: InstructionBinding
            R.layout.instruction, container, false)
         instructionBinding.buttonInventory.setOnClickListener{view: View ->
             Navigation.findNavController(view).navigate(R.id.action_instruction_to_shoe_List)
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(this) {
+            findNavController().navigate(R.id.action_instruction_to_welcome)
         }
         return instructionBinding.root
     }

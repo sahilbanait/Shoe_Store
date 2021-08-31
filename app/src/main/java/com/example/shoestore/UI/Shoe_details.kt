@@ -40,12 +40,12 @@ class Shoe_details : Fragment() {
 
 // Setting clickListener to navigate back to Shoe_List
         shoeDetailsBinding.buttonCancel.setOnClickListener { view: View ->
-            Navigation.findNavController(view).navigate(R.id.shoe_List)
+            Navigation.findNavController(view).navigate(R.id.action_shoe_details_to_shoe_List)
         }
 
         shoeDetailsBinding.buttonSave.setOnClickListener { view: View ->
             onSave()
-//            Navigation.findNavController(view).navigate(R.id.shoe_List)
+
         }
         return shoeDetailsBinding.root
     }
@@ -65,7 +65,7 @@ class Shoe_details : Fragment() {
             Toast.makeText(context, "Please fill all the information", Toast.LENGTH_SHORT).show()
         } else {
             sharedViewmodel.onSave(size, name, company, description)
-            findNavController().navigate(R.id.shoe_List)
+            findNavController().navigate(R.id.action_shoe_details_to_shoe_List)
 
 
 

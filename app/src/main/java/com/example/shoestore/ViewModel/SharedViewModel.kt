@@ -29,6 +29,10 @@ class SharedViewModel(): ViewModel(){
             _shoeLiveData.value = shoes
         }
     }
+    fun resetList(){
+        val item: Shoe_List_Data
+        item= Shoe_List_Data("","","","")
+    }
 
     override fun onCleared() {
         super.onCleared()

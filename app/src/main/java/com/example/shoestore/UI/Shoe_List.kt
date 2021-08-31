@@ -44,7 +44,7 @@ class Shoe_List : Fragment() {
 
         return shoeListBinding.root
     }
-// setting  up the list view
+// setting  up `the list view
     private fun listView(shoe: List<Shoe_List_Data>) {
 
 

@@ -3,7 +3,7 @@
 
 <!-- Linear Layout is used because it is easier to align all the children in single direction
    For Example- In this layout its aligning vertically -->
-
+<!--Using Linear Layout here as it is -->
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -59,7 +59,7 @@
             android:layout_marginTop="16dp"
 
 
-            android:text="Sign in " />
+            android:text="@string/sign_in" />
 
         <TextView
             android:id="@+id/textView3"
@@ -69,7 +69,7 @@
             android:layout_gravity="center_horizontal|center"
             android:paddingTop="10dp"
 
-            android:text="OR" />
+            android:text="@string/or" />
 
         <Button
             android:id="@+id/button_register"
@@ -79,7 +79,7 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/roboto_condensed_bold"
             android:padding="16dp"
-            android:text="Register "
+            android:text="@string/register"
             android:textColor="@color/black"
             android:textStyle="bold" />
     </LinearLayout>

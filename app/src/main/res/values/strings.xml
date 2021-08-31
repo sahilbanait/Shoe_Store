@@ -15,4 +15,7 @@
         \n\n3. Best Quality Shoes in the market </string>
     <string name="text_instruction">Shoe Store</string>
     <string name="image_instruction_screen">image_instruction_screen</string>
+    <string name="sign_in">Sign in</string>
+    <string name="or">OR</string>
+    <string name="register">Register</string>
 </resources>

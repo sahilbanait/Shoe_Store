@@ -35,6 +35,9 @@
         <action
             android:id="@+id/action_instruction_to_shoe_List"
             app:destination="@id/shoe_List" />
+        <action
+            android:id="@+id/action_instruction_to_welcome"
+            app:destination="@id/welcome" />
     </fragment>
     <fragment
         android:id="@+id/shoe_List"
@@ -45,13 +48,16 @@
             android:id="@+id/action_shoe_List_to_shoe_details"
             app:destination="@id/shoe_details" />
         <action
-            android:id="@+id/action_shoe_List_pop_including_instruction"
-            app:popUpTo="@id/instruction"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_shoe_List_to_instruction"
+            app:destination="@id/instruction" />
     </fragment>
     <fragment
         android:id="@+id/shoe_details"
         android:name="com.example.shoestore.UI.Shoe_details"
         android:label="shoe_details"
-        tools:layout="@layout/shoe_details" />
+        tools:layout="@layout/shoe_details" >
+        <action
+            android:id="@+id/action_shoe_details_to_instruction"
+            app:destination="@id/instruction" />
+    </fragment>
 </navigation>
